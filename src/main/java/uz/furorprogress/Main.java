@@ -38,7 +38,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        testInputs();
+//        testInputs();
 //        testStaticNumbers();
     }
 
@@ -51,10 +51,10 @@ public class Main {
                 System.out.println();
                 System.out.printf("%s = %s", df.format(number),  NumberToTextUtils.toText(number, "ru"));
                 System.out.println();
-                System.out.println("---------------");
                 System.out.println();
                 System.out.printf("%s = %s", df.format(number),  NumberToTextUtils.toText(number, "uk"));
                 System.out.println();
+                System.out.println("---------------");
             }catch (Exception e){
                 e.printStackTrace();
             }
