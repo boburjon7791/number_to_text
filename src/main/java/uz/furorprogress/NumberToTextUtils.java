@@ -146,19 +146,19 @@ public final class NumberToTextUtils {
 
             switch (language){
                 case RU: {
-                    text = (firstText + String.format(BUTUN_TEXT.getText(RU), secondText, butunText)).intern();
+                    text = (firstText + String.format(BUTUN_TEXT.getText(RU), secondText, butunText));
                     break;
                 }
                 default: {
-                    text = (firstText + String.format(BUTUN_TEXT.getText(language), butunText, secondText)).intern();
+                    text = (firstText + String.format(BUTUN_TEXT.getText(language), butunText, secondText));
                     break;
                 }
             }
-            String trimmed = text.intern().trim();
-            return !trimmed.isEmpty() ? (Character.toUpperCase(trimmed.charAt(0))+trimmed.substring(1)).intern() : "";
+            String trimmed = text.trim();
+            return !trimmed.isEmpty() ? (Character.toUpperCase(trimmed.charAt(0))+trimmed.substring(1)) : "";
         }
-        String trimmed = firstText.intern().trim();
-        return !trimmed.isEmpty() ? (Character.toUpperCase(trimmed.charAt(0))+trimmed.substring(1)).intern() : "";
+        String trimmed = firstText.trim();
+        return !trimmed.isEmpty() ? (Character.toUpperCase(trimmed.charAt(0))+trimmed.substring(1)) : "";
     }
 
     private static String toText(long number, String language) {
@@ -277,7 +277,7 @@ public final class NumberToTextUtils {
         for (int j = sonlarListi.size()-1; j >= 0; j--) {
 
             String str = sonlarListi.get(j);
-            if (!str.intern().trim().isEmpty()) {
+            if (!str.trim().isEmpty()) {
                 text.append(str);
                 text.append(" ");
             }
