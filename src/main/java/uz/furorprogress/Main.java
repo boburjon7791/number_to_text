@@ -27,10 +27,6 @@ public class Main {
     static double[] testDoubleNumbers = Arrays.stream(testNumbers)
             .mapToDouble(num -> num + Math.random()) // Random kasr qo'shish
             .filter(num -> Math.abs(num) < 1_000_000_000_000_000L) // 15 xonadan katta bo'lmasligi uchun
-            .map(operand -> {
-                double multiplicationResult = operand * 2;
-                return multiplicationResult / 2;
-            })
             .toArray();
     static {
         System.out.println(Arrays.toString(Arrays.stream(testDoubleNumbers).boxed().map(number -> df.format(number)).toArray(String[]::new)));
